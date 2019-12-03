@@ -8,7 +8,10 @@ const Producto = ({producto, carrito, agregarProducto, productos}) => {
     // Agregar producto al carrito
     const seleccionarProducto = id => {
         const producto = productos.filter(producto => producto.id === id )[0];
-        console.log(producto);
+        agregarProducto([
+            ...carrito, 
+            producto
+        ]);
     }
 
     return ( 
