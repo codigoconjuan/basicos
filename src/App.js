@@ -1,9 +1,9 @@
 import React, { Fragment, useState } from 'react';
 import Header from './components/Header';
 import Footer from './components/Footer';
+import Producto from './components/Producto';
 
 function App() {
-
 
   // Crear listado de productos
   const [ productos, guardarProductos ] = useState([
@@ -22,6 +22,14 @@ function App() {
         <Header 
           titulo='Tienda Virtual'
         />
+
+        <h1>Lista de Productos</h1>
+        {productos.map(producto => (
+          <Producto 
+            key={producto.id}
+            producto={producto}
+          />
+        ))}
 
         <Footer 
           fecha={fecha}
