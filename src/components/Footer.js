@@ -1,8 +1,8 @@
 import React from 'react'
 
-const Footer = () => ( 
+const Footer = ({fecha}) => ( 
     <footer>
-        <p>Todos los derechos reservados &copy;</p>
+        <p>Todos los derechos reservados &copy; {fecha} </p>
     </footer>
 );
  
